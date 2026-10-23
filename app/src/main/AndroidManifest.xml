@@ -4,6 +4,8 @@
     <application
         android:allowBackup="false"
         android:label="NT-Code Popup Blocker"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <meta-data android:name="xposedmodule" android:value="true" />
         <meta-data android:name="xposeddescription" android:value="Suppresses the LG NT-Code warning dialog only when its title and message match the configured text." />
