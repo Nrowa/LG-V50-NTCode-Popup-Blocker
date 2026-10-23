@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml"><img src="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml/badge.svg?branch=main" alt="Status build"></a>
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/latest"><img src="https://img.shields.io/github/v/release/mchasby/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=rilis%20terbaru" alt="Rilis terbaru"></a>
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases"><img src="https://img.shields.io/github/downloads/mchasby/LG-V50-NTCode-Popup-Blocker/total?label=unduhan" alt="Jumlah unduhan"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml"><img src="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml/badge.svg?branch=main" alt="Status build"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest"><img src="https://img.shields.io/github/v/release/Nrowa/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=rilis%20terbaru" alt="Rilis terbaru"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases"><img src="https://img.shields.io/github/downloads/Nrowa/LG-V50-NTCode-Popup-Blocker/total?label=unduhan" alt="Jumlah unduhan"></a>
 </p>
 
 # NT-Code Popup Blocker
@@ -16,9 +16,9 @@ Modul LSPosed kecil untuk LG V50 ThinQ yang menyembunyikan satu dialog peringata
 
 ## Download
 
-**[Download APK rilis terbaru](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/latest)**
+**[Download APK rilis terbaru](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest)**
 
-Jika belum ada rilis, buka [Actions](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions) dan cek artifact dari build yang berhasil.
+Jika belum ada rilis, buka [Actions](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions) dan cek artifact dari build yang berhasil.
 
 ## Fitur
 
@@ -42,7 +42,7 @@ Kompatibilitas dengan model LG lain, Android lain, ROM lain, atau versi LSPosed 
 
 ## Instalasi
 
-1. Download APK dari [Releases](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/latest).
+1. Download APK dari [Releases](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest).
 2. Instal APK di HP.
 3. Buka LSPosed Manager dan aktifkan **NT-Code Popup Blocker**.
 4. Buka scope modul dan pilih **Call services** (`com.android.phone`) saja.
@@ -61,14 +61,14 @@ Jangan aktifkan scope `System Framework` untuk modul ini.
 
 Project memakai Java 17, Android Gradle Plugin 8.6.1, Gradle 8.7, dan Android SDK Platform 35.
 
-Build otomatis berjalan saat push ke branch `main`/`master` dan bisa dijalankan manual dari tab **Actions**. Push tag versi seperti `v1.0.0` akan menjalankan build dan menerbitkan GitHub Release berisi APK debug.
+Build otomatis berjalan saat push ke branch `main`/`master` dan bisa dijalankan manual dari tab **Actions**. Push tag versi baru seperti `v1.1.1` akan menjalankan build dan menerbitkan GitHub Release berisi APK debug. Jangan memakai ulang tag yang sudah ada.
 
 APK unduhan merupakan **debug build**, bukan APK yang ditandatangani dengan release key produksi.
 
 ## Troubleshooting
 
 - **Peringatan masih muncul:** pastikan modul aktif, scope hanya `com.android.phone`, dan HP sudah direboot. Periksa LSPosed logs untuk entri `[NTCodePopupBlocker]`.
-- **APK tidak ada di Releases:** buka run terkait di [Actions](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions) dan periksa job build serta release.
+- **APK tidak ada di Releases:** buka run terkait di [Actions](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions) dan periksa job build serta release.
 - **Ingin membatalkan:** nonaktifkan modul di LSPosed lalu reboot.
 
 ## Batasan dan risiko
@@ -81,4 +81,4 @@ Ini workaround khusus perangkat. Modul mengubah perilaku dialog, bukan memperbai
 
 ## Lisensi
 
-Belum ada file lisensi. Sampai lisensi ditambahkan, repository ini belum memberikan izin umum untuk menggunakan ulang atau mendistribusikan source code.
+Kode sumber asli, dokumentasi, dan aset ikon dalam repository ini menggunakan [lisensi MIT](LICENSE). Dependency pihak ketiga tetap mengikuti lisensinya masing-masing.
