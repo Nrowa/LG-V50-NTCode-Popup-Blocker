@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml"><img src="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml/badge.svg?branch=main" alt="Build status"></a>
-  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/"><img src="https://img.shields.io/github/v/release/Nrowa/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=release" alt="Release"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest"><img src="https://img.shields.io/github/v/release/Nrowa/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=latest%20release" alt="Latest release"></a>
   <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases"><img src="https://img.shields.io/github/downloads/Nrowa/LG-V50-NTCode-Popup-Blocker/total?label=downloads" alt="Downloads"></a>
   <img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white" alt="Android">
   <img src="https://img.shields.io/badge/module-LSPosed-7B68EE" alt="LSPosed module">
@@ -18,7 +18,7 @@ A small LSPosed module for the LG V50 ThinQ that suppresses one specific LG NT-C
 
 ## Download
 
-**[Get the release APK](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/)**
+**[Get the latest release APK](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest)**
 
 Releases are published from version tags. If no release has been published yet, check the [Actions tab](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions) for the latest successful build artifact.
 
@@ -44,7 +44,7 @@ Compatibility with other LG models, Android versions, ROMs, or LSPosed versions 
 
 ## Installation
 
-1. Download the APK from [Releases](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/.
+1. Download the APK from [Releases](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/latest).
 2. Install the APK on the phone.
 3. Open LSPosed Manager and enable **NT-Code Popup Blocker**.
 4. Open its scope and select **Call services** (`com.android.phone`) only.
@@ -63,7 +63,7 @@ Do **not** enable `System Framework` scope for this module.
 
 The project uses Java 17, Android Gradle Plugin 8.6.1, Gradle 8.7, and Android SDK platform 35.
 
-A build runs on pushes to `main`/`master` and can be started manually from **Actions**. Pushing a version tag such as `v1.0.0` runs the build and publishes a GitHub Release with the debug APK attached.
+A build runs on pushes to `main`/`master` and can be started manually from **Actions**. Pushing a new version tag such as `v1.1.1` runs the build and publishes a GitHub Release with the debug APK attached. Do not reuse an existing tag.
 
 The uploaded APK is a **debug build** and is not signed with a production release key.
 
@@ -83,4 +83,4 @@ This is a narrowly scoped, device-specific workaround. It changes UI behavior ra
 
 ## License
 
-No license has been added yet. Unless a license is added, this repository does not grant general permission to reuse or redistribute the source code.
+The original source code, documentation, and icon assets in this repository are licensed under the [MIT License](LICENSE). Third-party dependencies are governed by their respective licenses.
