@@ -1,16 +1,17 @@
 package com.nrowa.ntcodepopup;
 
 import android.app.AlertDialog;
-import android.text.TextUtils;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
+import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 /**
- * Narrow-scope Xposed hook: suppress only the known LG NT-Code warning
- * observed in package com.android.phone. Other dialogs are left untouched.
+ * Suppress only the known LG NT-Code warning in com.android.phone.
+ * Reads the AlertController's stored text because AlertDialog does not expose
+ * public getTitle()/getMessage() accessors in the Android API.
  */
 public final class NtCodeHook implements IXposedHookLoadPackage {
     private static final String TARGET_PACKAGE = "com.android.phone";
@@ -37,10 +38,12 @@ public final class NtCodeHook implements IXposedHookLoadPackage {
                         }
 
                         AlertDialog dialog = (AlertDialog) param.thisObject;
-                        CharSequence titleValue = dialog.getTitle();
-                        CharSequence messageValue = dialog.getMessage();
-                        String title = titleValue == null ? "" : titleValue.toString();
-                        String message = messageValue == null ? "" : messageValue.toString();
+                        Object controller = XposedHelpers.getObjectField(dialog, "mAlert");
+                        Object titleObject = XposedHelpers.getObjectField(controller, "mTitle");
+                        Object messageObject = XposedHelpers.getObjectField(controller, "mMessage");
+
+                        String title = titleObject == null ? "" : titleObject.toString();
+                        String message = messageObject == null ? "" : messageObject.toString();
 
                         boolean matches = title.contains(TITLE_FRAGMENT)
                                 && message.contains(MESSAGE_FRAGMENT_1)
@@ -48,10 +51,11 @@ public final class NtCodeHook implements IXposedHookLoadPackage {
 
                         if (matches) {
                             XposedBridge.log("[NTCodePopupBlocker] Suppressed matching LG NT-Code dialog.");
-                            // Skip AlertDialog.show() for this exact warning only.
+                            // Skip showing this exact warning only.
                             param.setResult(null);
                         }
                     } catch (Throwable t) {
+                        // Fail open: if Android/OEM internals differ, do not suppress other dialogs.
                         XposedBridge.log("[NTCodePopupBlocker] Dialog inspection failed: " + t);
                     }
                 }
