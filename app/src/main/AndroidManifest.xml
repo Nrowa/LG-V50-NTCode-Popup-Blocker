@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="32" />
+    <application
+        android:allowBackup="false"
+        android:label="NT-Code Popup Blocker"
+        android:description="Blocks only the specific LG NT-Code warning dialog in com.android.phone."
+        android:supportsRtl="true">
+        <meta-data android:name="xposedmodule" android:value="true" />
+        <meta-data android:name="xposeddescription" android:value="Suppresses the LG NT-Code warning dialog only when its title and message match the configured text." />
+        <meta-data android:name="xposedminversion" android:value="82" />
+    </application>
+</manifest>
