@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml"><img src="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml/badge.svg?branch=main" alt="Build status"></a>
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/"><img src="https://img.shields.io/github/v/release/mchasby/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=release" alt="Release"></a>
-  <a href="https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases"><img src="https://img.shields.io/github/downloads/mchasby/LG-V50-NTCode-Popup-Blocker/total?label=downloads" alt="Downloads"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml"><img src="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions/workflows/build-apk.yml/badge.svg?branch=main" alt="Build status"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/"><img src="https://img.shields.io/github/v/release/Nrowa/LG-V50-NTCode-Popup-Blocker?display_name=tag&label=release" alt="Release"></a>
+  <a href="https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases"><img src="https://img.shields.io/github/downloads/Nrowa/LG-V50-NTCode-Popup-Blocker/total?label=downloads" alt="Downloads"></a>
   <img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white" alt="Android">
   <img src="https://img.shields.io/badge/module-LSPosed-7B68EE" alt="LSPosed module">
 </p>
@@ -18,9 +18,9 @@ A small LSPosed module for the LG V50 ThinQ that suppresses one specific LG NT-C
 
 ## Download
 
-**[Get the release APK](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/)**
+**[Get the release APK](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/)**
 
-Releases are published from version tags. If no release has been published yet, check the [Actions tab](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions) for the latest successful build artifact.
+Releases are published from version tags. If no release has been published yet, check the [Actions tab](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions) for the latest successful build artifact.
 
 ## Features
 
@@ -44,7 +44,7 @@ Compatibility with other LG models, Android versions, ROMs, or LSPosed versions 
 
 ## Installation
 
-1. Download the APK from [Releases](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/releases/.
+1. Download the APK from [Releases](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/releases/.
 2. Install the APK on the phone.
 3. Open LSPosed Manager and enable **NT-Code Popup Blocker**.
 4. Open its scope and select **Call services** (`com.android.phone`) only.
@@ -70,7 +70,7 @@ The uploaded APK is a **debug build** and is not signed with a production releas
 ## Troubleshooting
 
 - **Warning still appears:** confirm the module is enabled, only `com.android.phone` is selected, and the phone has been rebooted. Check LSPosed logs for entries prefixed with `[NTCodePopupBlocker]`.
-- **APK is missing from Releases:** open the tag's workflow run under [Actions](https://github.com/mchasby/LG-V50-NTCode-Popup-Blocker/actions) and inspect the build and release jobs.
+- **APK is missing from Releases:** open the tag's workflow run under [Actions](https://github.com/Nrowa/LG-V50-NTCode-Popup-Blocker/actions) and inspect the build and release jobs.
 - **Need to undo the change:** disable the module in LSPosed and reboot.
 
 ## Safety and limitations
