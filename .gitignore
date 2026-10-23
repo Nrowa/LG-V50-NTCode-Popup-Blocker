@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Android local configuration and generated files
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# Signing keys and local signing configuration (never commit secrets)
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.env
+.env.*
+
+# Operating system / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
