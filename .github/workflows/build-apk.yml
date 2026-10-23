@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - master
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
@@ -39,3 +41,44 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
+
+  publish-release:
+    name: Publish GitHub Release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download APK artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: NTCode-Popup-Blocker-debug-apk
+          path: dist
+
+      - name: Name release APK
+        run: mv dist/app-debug.apk "dist/NTCode-Popup-Blocker-${GITHUB_REF_NAME}-debug.apk"
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: NT-Code Popup Blocker ${{ github.ref_name }}
+          generate_release_notes: true
+          body: |
+            ## Included
+            - LSPosed module that checks for the specific LG NT-Code warning dialog in `com.android.phone`.
+            - Intended to suppress only a dialog whose title/message match the configured text.
+
+            ## Install
+            1. Install the APK.
+            2. Enable **NT-Code Popup Blocker** in LSPosed.
+            3. Select **Call services** (`com.android.phone`) only.
+            4. Reboot.
+
+            ## Notes
+            - This hides the warning; it does not repair NT-Code, carrier configuration, firmware, or modem behavior.
+            - APK is a debug build and is not signed with a production release key.
+            - Tested successfully on LG V50 ThinQ LM-V500VM / Android 12 (user-reported). Other setups are unverified.
+          files: dist/NTCode-Popup-Blocker-${{ github.ref_name }}-debug.apk
+          fail_on_unmatched_files: true
